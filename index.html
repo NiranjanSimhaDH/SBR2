@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>South Bloc Reports</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <meta name="google-site-verification" content="ndtdIOzqvch8Df1_pSnVI_vbT-cItJ39CZIdbJwQAxI" />
+  <!-- Supabase Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <meta name="description"
+    content="South Bloc Reports (SBR) is an independent geopolitical and strategic research platform based in India, focused on delivering structured analysis on global affairs, security developments, conflict zones, diplomacy, and emerging geopolitical risks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="South Bloc Reports" />
+  <meta property="og:description"
+    content="South Bloc Reports (SBR) is an independent geopolitical and strategic research platform based in India, focused on delivering structured analysis on global affairs, security developments, conflict zones, diplomacy, and emerging geopolitical risks." />
+
+  <meta property="og:url" content="https://southblocreports.in/" />
+  <meta property="og:image" content="https://southblocreports.in/logo.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="South Bloc Reports" />
+
+  <!-- Twitter Card Data -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="South Bloc Reports" />
+  <meta name="twitter:description"
+    content="South Bloc Reports (SBR) is an independent geopolitical and strategic research platform based in India, focused on delivering structured analysis on global affairs, security developments, conflict zones, diplomacy, and emerging geopolitical risks." />
+  <meta name="twitter:image" content="https://southblocreports.in/logo.jpeg" />
+  <meta name="keywords"
+    content="SBR,South,Bloc,Reports,SOUTH,BLOC,REPORTS,SOUTH BLOC REPORTS,sbr,south bloc reports,research,publications,x,twitter,geopolitics,GEOPOLITICS,TERRORISM,terrorism,WARFARE,warfare,INTELLIGENCE,intelligence,southblocreports,independent,news,independentnews,south bloc report,SOUTH BLOC REPORT,southblocreport,SOUTHBLOCREPORT" />
+  <link rel="icon" href="logo.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- CURSOR -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-text">SOUTH BLOC REPORTS</span>
+        <span class="logo-line"></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link" data-label="01">About Us</a>
+        <a href="#approach" class="nav-link" data-label="02">Our Approach</a>
+        <a href="#services" class="nav-link" data-label="03">Services</a>
+        <a href="#projects" class="nav-link" data-label="04">Projects</a>
+        <a href="#articles" class="nav-link">Intel Feed</a>
+        <a href="admin.html" class="nav-link cta-link">Admin Login</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="ticker-dot"></span>
+        <span id="liveTime" class="mono"></span>
+        <span class="separator">|</span>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-img">
+          <img src="logo.jpeg" alt="South Bloc Reports Logo" />
+          <div class="logo-scan-line"></div>
+        </div>
+      </div>
+
+      <div class="hero-title-block">
+        <h1 class="hero-title">
+          <span class="line-reveal">SOUTH BLOC</span>
+          <span class="line-reveal delay-1">REPORTS</span>
+        </h1>
+        <p class="hero-tags">
+          <span>TERRORISM</span>
+          <span class="dot-sep">·</span>
+          <span>GEO-POLITICS</span>
+          <span class="dot-sep">·</span>
+          <span>WARFARE</span>
+          <span class="dot-sep">·</span>
+          <span>INTELLIGENCE</span>
+        </p>
+      </div>
+
+      <div class="hero-desc fade-in-up">
+        <p>South Bloc Reports (SBR) is an independent geopolitical and strategic research platform based in India,
+          focused on delivering structured analysis on global affairs, security developments, conflict zones, diplomacy,
+          and emerging geopolitical risks.</p>
+      </div>
+
+      <div class="hero-actions fade-in-up delay-2">
+        <a href="#articles" class="btn btn-primary">Access Intel Feed</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Dashboard image -->
+    <div class="hero-dashboard">
+      <div class="dashboard-frame">
+        <div class="dashboard-bar">
+          <span class="db-dot red"></span>
+          <span class="db-dot yellow"></span>
+          <span class="db-dot green"></span>
+          <span class="db-label mono">SBR</span>
+        </div>
+        <img src="dashboard.jpeg" alt="South Bloc Reports Dashboard" />
+        <div class="dashboard-overlay"></div>
+        <div class="dashboard-scanline"></div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="mono">SCROLL</span>
+      <div class="scroll-line">
+        <div class="scroll-thumb"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-tag mono">// 01 — ABOUT US</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">Intelligence<br /><em>Redefined.</em></h2>
+          <div class="about-divider"></div>
+        </div>
+        <div class="about-right">
+          <p class="about-lead">
+            Founded with the objective of making geopolitical analysis more accessible, practical, and research-driven,
+            SBR operates at the intersection of international relations, strategic affairs, military developments,
+            intelligence analysis, and terrorism studies. Our work focuses on understanding not just events, but the
+            deeper political, strategic, and behavioural patterns shaping them.</p>
+          <p class="about-body">At SBR, we believe geopolitics extends far beyond headlines, official statements, and
+            diplomatic optics. Real strategic analysis requires decoding domestic politics, leadership behaviour, public
+            sentiment, military posture, economic vulnerabilities, and long-term national objectives</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num" data-target="50">0</span><span class="stat-label">Reports
+                Published</span></div>
+            <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">Countries
+                Covered</span></div>
+            <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label">Years
+                Active</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DIFFERENTIATOR ==================== -->
+  <section class="differentiator" id="differentiator">
+    <div class="diff-progress">
+      <div class="diff-progress-bar" id="diffProgress"></div>
+    </div>
+    <div class="diff-carousel-wrap">
+
+      <div class="diff-slides">
+
+        <!-- Slide 1 -->
+        <div class="diff-slide active" data-slide="0">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">SBR DIFFERENTIATOR</span>
+            <span class="diff-slide-num">01</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">DEPTH OVER SPEED</span>
+            <h2 class="diff-slide-title">Unlike Conventional<em>Platforms.</em></h2>
+            <p class="diff-slide-body">Unlike conventional news-focused platforms, SBR prioritizes depth over speed. We
+              do not aim to simply summarize events — we aim to decode the forces that shape them.</p>
+          </div>
+          <span class="diff-bg-num">01</span>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="diff-slide" data-slide="1">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">DECODE // 01</span>
+            <span class="diff-slide-num">02</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">ROOT CAUSE ANALYSIS</span>
+            <h2 class="diff-slide-title">Why Events<em>Happen.</em></h2>
+            <p class="diff-slide-body">We trace the root causes behind geopolitical events — unpacking historical
+              grievances, internal pressures, and the trigger conditions that convert tension into action.</p>
+          </div>
+          <span class="diff-bg-num">02</span>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="diff-slide" data-slide="2">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">DECODE // 02</span>
+            <span class="diff-slide-num">03</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">STRATEGIC CALCULUS</span>
+            <h2 class="diff-slide-title">Strategic<em>Incentives.</em></h2>
+            <p class="diff-slide-body">What strategic incentives drive state actors and non-state groups? We map the
+              economic, military, and ideological calculus that motivates decisions shaping global outcomes.</p>
+          </div>
+          <span class="diff-bg-num">03</span>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="diff-slide" data-slide="3">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">DECODE // 03</span>
+            <span class="diff-slide-num">04</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">SYSTEMS ANALYSIS</span>
+            <h2 class="diff-slide-title">Variable<em>Interaction.</em></h2>
+            <p class="diff-slide-body">How do domestic and international variables interact? We trace the feedback loops
+              between internal politics, economic conditions, and external geopolitical forces.</p>
+          </div>
+          <span class="diff-bg-num">04</span>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="diff-slide" data-slide="4">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">DECODE // 04</span>
+            <span class="diff-slide-num">05</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">SCENARIO MAPPING</span>
+            <h2 class="diff-slide-title">Future<em>Trajectories.</em></h2>
+            <p class="diff-slide-body">What possible futures may emerge? Our analysts map likely, unlikely, and
+              tail-risk scenarios — presenting clear reasoning chains for each potential outcome.</p>
+          </div>
+          <span class="diff-bg-num">05</span>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="diff-slide" data-slide="5">
+          <div class="diff-slide-left">
+            <span class="diff-slide-label mono">OUR AUDIENCE</span>
+            <span class="diff-slide-num">06</span>
+            <div class="diff-slide-bar"></div>
+          </div>
+          <div class="diff-slide-right">
+            <span class="diff-slide-tag mono">BUILT FOR SERIOUS READERS</span>
+            <h2 class="diff-slide-title">Serious Geopolitical<em>Understanding.</em></h2>
+            <p class="diff-slide-body">Our outputs are designed for students, researchers, policy enthusiasts, analysts,
+              and strategic communities who demand more than surface-level analysis.</p>
+          </div>
+          <span class="diff-bg-num">06</span>
+        </div>
+
+      </div><!-- /.diff-slides -->
+
+      <div class="diff-controls">
+        <button class="diff-btn" id="diffPrev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div class="diff-dots" id="diffDots">
+          <button class="diff-dot active" aria-label="Slide 1"></button>
+          <button class="diff-dot" aria-label="Slide 2"></button>
+          <button class="diff-dot" aria-label="Slide 3"></button>
+          <button class="diff-dot" aria-label="Slide 4"></button>
+          <button class="diff-dot" aria-label="Slide 5"></button>
+          <button class="diff-dot" aria-label="Slide 6"></button>
+        </div>
+        <button class="diff-btn" id="diffNext" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- /.diff-carousel-wrap -->
+  </section>
+
+  <!-- ==================== COVERAGE AREAS ==================== -->
+  <section class="coverage" id="coverage">
+    <div class="container">
+      <div class="section-tag mono">// 02 — COVERAGE AREAS</div>
+      <h2 class="section-title center">What We <em>Track</em></h2>
+      <div class="coverage-grid">
+
+        <div class="coverage-card" data-index="01">
+          <div class="card-number mono">01</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="30" y1="4" x2="30" y2="56" stroke="currentColor" stroke-width="1.5" />
+              <line x1="4" y1="30" x2="56" y2="30" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="30" cy="30" r="4" fill="currentColor" />
+              <line x1="30" y1="4" x2="30" y2="0" stroke="currentColor" stroke-width="2" />
+              <line x1="30" y1="56" x2="30" y2="60" stroke="currentColor" stroke-width="2" />
+              <line x1="4" y1="30" x2="0" y2="30" stroke="currentColor" stroke-width="2" />
+              <line x1="56" y1="30" x2="60" y2="30" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <h3>Terrorism</h3>
+          <p>Tracking extremist networks, attack vectors, radicalization pipelines, and counter-terrorism operations
+            across active threat theaters.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="02">
+          <div class="card-number mono">02</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="30,5 55,20 55,40 30,55 5,40 5,20" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="30" cy="30" r="8" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="30" y1="5" x2="30" y2="22" stroke="currentColor" stroke-width="1" />
+              <line x1="30" y1="38" x2="30" y2="55" stroke="currentColor" stroke-width="1" />
+              <line x1="5" y1="20" x2="23" y2="26" stroke="currentColor" stroke-width="1" />
+              <line x1="37" y1="34" x2="55" y2="40" stroke="currentColor" stroke-width="1" />
+              <line x1="55" y1="20" x2="37" y2="26" stroke="currentColor" stroke-width="1" />
+              <line x1="23" y1="34" x2="5" y2="40" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          <h3>Geo-Politics</h3>
+          <p>Deep-dive geopolitical analysis covering shifting alliances, diplomatic pressure points, and the strategic
+            interests driving global flashpoints.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="03">
+          <div class="card-number mono">03</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="28" width="40" height="18" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <rect x="22" y="20" width="16" height="8" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="20" cy="46" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="40" cy="46" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="30" y1="14" x2="30" y2="20" stroke="currentColor" stroke-width="1.5" />
+              <line x1="22" y1="14" x2="38" y2="14" stroke="currentColor" stroke-width="1.5" />
+              <line x1="10" y1="34" x2="50" y2="34" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          <h3>Warfare</h3>
+          <p>Battlefield dispatches, tactical assessments, weapons systems analysis, and operational breakdowns from
+            active and latent conflict zones.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="04">
+          <div class="card-number mono">04</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="12" width="44" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="8" y1="20" x2="52" y2="20" stroke="currentColor" stroke-width="1" />
+              <circle cx="30" cy="36" r="8" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="30" cy="36" r="3" fill="currentColor" />
+              <line x1="24" y1="48" x2="36" y2="48" stroke="currentColor" stroke-width="2" />
+              <line x1="30" y1="44" x2="30" y2="52" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="12" cy="16" r="1.5" fill="currentColor" />
+              <circle cx="18" cy="16" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Intelligence</h3>
+          <p>Signals intelligence, covert operations exposure, agency assessments, and the classified world brought to
+            light through verified open-source analysis.</p>
+          <div class="card-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH APPROACH ==================== -->
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-tag mono">// 03 — RESEARCH APPROACH</div>
+      <h2 class="section-title center">Our Research <em>Approach</em></h2>
+      <p class="approach-intro">SBR follows a country-desk research model, enabling deep and continuous monitoring of
+        selected nations across six core pillars:</p>
+      <div class="approach-grid">
+
+        <div class="coverage-card" data-index="01">
+          <div class="card-number mono">01</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="5,22 30,6 55,22" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="14" y1="22" x2="14" y2="48" stroke="currentColor" stroke-width="1.5" />
+              <line x1="22" y1="22" x2="22" y2="48" stroke="currentColor" stroke-width="1.5" />
+              <line x1="30" y1="22" x2="30" y2="48" stroke="currentColor" stroke-width="1.5" />
+              <line x1="38" y1="22" x2="38" y2="48" stroke="currentColor" stroke-width="1.5" />
+              <line x1="46" y1="22" x2="46" y2="48" stroke="currentColor" stroke-width="1.5" />
+              <line x1="5" y1="48" x2="55" y2="48" stroke="currentColor" stroke-width="2" />
+              <line x1="5" y1="52" x2="55" y2="52" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          <h3>Domestic Politics</h3>
+          <p>Tracking electoral dynamics, legislative developments, political leadership shifts, and governance
+            stability across monitored states.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="02">
+          <div class="card-number mono">02</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="24" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <ellipse cx="30" cy="30" rx="12" ry="24" stroke="currentColor" stroke-width="1" fill="none" />
+              <line x1="6" y1="30" x2="54" y2="30" stroke="currentColor" stroke-width="1" />
+              <line x1="10" y1="18" x2="50" y2="18" stroke="currentColor" stroke-width="1" />
+              <line x1="10" y1="42" x2="50" y2="42" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          <h3>Foreign Policy &amp; Geopolitics</h3>
+          <p>Analysing bilateral relations, treaty frameworks, diplomatic signalling, and bloc alignments shaping state
+            behaviour on the world stage.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="03">
+          <div class="card-number mono">03</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <line x1="10" y1="8" x2="10" y2="50" stroke="currentColor" stroke-width="1.5" />
+              <line x1="10" y1="50" x2="52" y2="50" stroke="currentColor" stroke-width="1.5" />
+              <rect x="15" y="36" width="8" height="14" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <rect x="27" y="24" width="8" height="26" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <rect x="39" y="12" width="8" height="38" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <polyline points="19,36 31,24 43,12" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"
+                fill="none" />
+            </svg>
+          </div>
+          <h3>Economy &amp; Strategic Sectors</h3>
+          <p>Monitoring macroeconomic indicators, strategic industry dependencies, sanctions impact, and the tools of
+            economic statecraft.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="04">
+          <div class="card-number mono">04</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="4" fill="currentColor" />
+              <path d="M20,20 Q10,30 20,40" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M13,13 Q1,30 13,47" stroke="currentColor" stroke-width="1" fill="none" />
+              <path d="M40,20 Q50,30 40,40" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M47,13 Q59,30 47,47" stroke="currentColor" stroke-width="1" fill="none" />
+              <line x1="30" y1="8" x2="30" y2="26" stroke="currentColor" stroke-width="1.5" />
+              <line x1="24" y1="8" x2="36" y2="8" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h3>Media Ecosystem</h3>
+          <p>Mapping state and independent media landscapes, disinformation campaigns, and the information environment
+            within target countries.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="05">
+          <div class="card-number mono">05</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="16" r="6" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M18,44 Q18,30 30,30 Q42,30 42,44" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="12" cy="18" r="5" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M3,44 Q3,32 12,32" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <circle cx="48" cy="18" r="5" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M57,44 Q57,32 48,32" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+          </div>
+          <h3>Public Mood &amp; Society</h3>
+          <p>Assessing protest indicators, social cohesion, demographic pressures, and civilian attitudes toward
+            governance and conflict.</p>
+          <div class="card-glow"></div>
+        </div>
+
+        <div class="coverage-card" data-index="06">
+          <div class="card-number mono">06</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30,5 L52,15 L52,34 Q52,50 30,56 Q8,50 8,34 L8,15 Z" stroke="currentColor" stroke-width="1.5"
+                fill="none" />
+              <circle cx="30" cy="32" r="9" stroke="currentColor" stroke-width="1" fill="none" />
+              <circle cx="30" cy="32" r="2.5" fill="currentColor" />
+              <line x1="30" y1="19" x2="30" y2="23" stroke="currentColor" stroke-width="1" />
+              <line x1="30" y1="41" x2="30" y2="45" stroke="currentColor" stroke-width="1" />
+              <line x1="17" y1="32" x2="21" y2="32" stroke="currentColor" stroke-width="1" />
+              <line x1="39" y1="32" x2="43" y2="32" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          <h3>Security, Military &amp; Intelligence</h3>
+          <p>Evaluating force posture, threat actor activity, intelligence operations, and security sector dynamics
+            across monitored nations.</p>
+          <div class="card-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-tag mono">// 03 — STRATEGIC DOMAINS</div>
+      <h2 class="section-title">Operational <em>Capabilities</em></h2>
+
+      <div class="services-matrix">
+        <!-- Service 01 -->
+        <div class="service-node" data-index="01">
+          <div class="node-header">
+            <span class="node-num mono">SRV_01</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20" />
+              </svg>
+            </div>
+          </div>
+          <h3>Geopolitical Research & Strategic Analysis</h3>
+          <p>Deep-dive assessments of regional power shifts, bilateral dynamics, and long-term strategic trajectories
+            shaping global stability.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 02 -->
+        <div class="service-node" data-index="02">
+          <div class="node-header">
+            <span class="node-num mono">SRV_02</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+          </div>
+          <h3>Conflict, Security & Terrorism Studies</h3>
+          <p>Monitoring kinetic environments, extremist networking, and the tactical evolution of non-state actors in
+            contested theaters.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 03 -->
+        <div class="service-node" data-index="03">
+          <div class="node-header">
+            <span class="node-num mono">SRV_03</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+            </div>
+          </div>
+          <h3>Warfare, Defence & Military Analysis</h3>
+          <p>Tactical breakdowns of battlefield developments, weapons systems integration, and doctrine shifts in modern
+            peer-to-peer conflict.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 04 -->
+        <div class="service-node" data-index="04">
+          <div class="node-header">
+            <span class="node-num mono">SRV_04</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+            </div>
+          </div>
+          <h3>Terrorism, Security & Insurgency Studies</h3>
+          <p>Analysis of radicalization pipelines, signal-to-noise detection in covert operations, and
+            counter-insurgency framework evaluation.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 05 -->
+        <div class="service-node" data-index="05">
+          <div class="node-header">
+            <span class="node-num mono">SRV_05</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <polyline points="17 11 19 13 23 9" />
+              </svg>
+            </div>
+          </div>
+          <h3>Political Risk & Election Analysis</h3>
+          <p>Forecasting domestic stability through election monitoring, leadership transition mapping, and legislative
+            risk assessment.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 06 -->
+        <div class="service-node" data-index="06">
+          <div class="node-header">
+            <span class="node-num mono">SRV_06</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+          </div>
+          <h3>Strategic Research Collaborations & Expert Engagements</h3>
+          <p>Facilitating closed-door briefings, specialist panels, and collaborative intelligence projects for
+            institutional partners.</p>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+
+        <!-- Service 07 -->
+        <div class="service-node full-width" data-index="07">
+          <div class="node-header">
+            <span class="node-num mono">SRV_07</span>
+            <div class="node-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                <path d="M22 12A10 10 0 0 0 12 2v10z" />
+              </svg>
+            </div>
+          </div>
+          <div class="node-content-wrap">
+            <h3>Public Opinion Surveys & Sentiment Analysis</h3>
+            <p>Decoding public mood and societal trends through open-source sentiment mapping and demographic attitude
+              tracking across monitored regions.</p>
+          </div>
+
+          <div class="node-glitch-bg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH PROJECTS ==================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-tag mono">// 04 — RESEARCH PROJECTS</div>
+      <h2 class="section-title">Research <em>Projects</em></h2>
+      <p class="pub-intro">Click any project cover to download the full PDF report. Our research is made available
+        as open-access intelligence documents.</p>
+
+      <div class="pub-grid">
+
+        <!-- Project 1 -->
+        <div class="pub-card">
+          <a href="SBR_PUBLIC_SURVEYREPORT_MAY2026.pdf" download class="pub-pdf-preview" title="Download PDF">
+            <img src="logo.jpeg" alt="South Bloc Logo" class="project-logo-img">
+            <div class="pdf-download-overlay">
+              <div class="pdf-dl-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+              </div>
+              <span class="mono">DOWNLOAD PDF</span>
+            </div>
+          </a>
+          <div class="pub-info">
+            <div class="pub-meta">
+              <span class="pub-year mono">2026</span>
+              <span class="pub-tag mono">RESEARCH</span>
+            </div>
+            <h3>Indian Public Opinion on Government Handling of the Middle East Crisis</h3>
+            <p>South Bloc Reports’ first public survey offers a snapshot of public sentiment on fuel prices, economic
+              concerns, and citizen safety.</p>
+
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <!-- <div class="pub-card">
+          <a href="sahel-shadow-network-report.pdf" download class="pub-pdf-preview" title="Download PDF">
+            <img src="logo.jpeg" alt="South Bloc Logo" class="project-logo-img">
+            <div class="pdf-download-overlay">
+              <div class="pdf-dl-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+              </div>
+              <span class="mono">DOWNLOAD PDF</span>
+            </div>
+          </a>
+          <div class="pub-info">
+            <div class="pub-meta">
+              <span class="pub-year mono">2023</span>
+              <span class="pub-tag mono">TERRORISM</span>
+            </div>
+            <h3>Sahel Shadow Network: Jihadist Expansion Across West Africa</h3>
+            <p>Mapping Wagner Group movements, JNIM operations, and state collapse indicators from Mali to Niger in the
+              Sahel crisis zone.</p>
+
+          </div>
+        </div> -->
+
+        <!-- Project 3 -->
+        <!-- <div class="pub-card">
+          <a href="eastern-front-assessment.pdf" download class="pub-pdf-preview" title="Download PDF">
+            <img src="logo.jpeg" alt="South Bloc Logo" class="project-logo-img">
+            <div class="pdf-download-overlay">
+              <div class="pdf-dl-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+              </div>
+              <span class="mono">DOWNLOAD PDF</span>
+            </div>
+          </a>
+          <div class="pub-info">
+            <div class="pub-meta">
+              <span class="pub-year mono">2022 – 2023</span>
+              <span class="pub-tag mono">WARFARE</span>
+            </div>
+            <h3>Eastern Front Assessment: Russia-Ukraine 18-Month Analysis</h3>
+            <p>Comprehensive battlefield and strategic analysis covering front-line dynamics, logistics, drone warfare,
+              and the full NATO response framework.</p>
+
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ARTICLES ==================== -->
+  <section class="articles" id="articles"></section>
+  <div class="container">
+    <div class="section-tag mono">// 05 — INTEL FEED</div>
+    <div class="articles-header">
+      <h2 class="section-title">Latest <em>Reports</em></h2>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="terrorism">Terrorism</button>
+        <button class="filter-btn" data-filter="geo-politics">Geo-Politics</button>
+        <button class="filter-btn" data-filter="warfare">Warfare</button>
+        <button class="filter-btn" data-filter="intelligence">Intelligence</button>
+      </div>
+    </div>
+
+    <div class="articles-grid" id="articlesGrid">
+
+      <article class="article-card featured" data-category="warfare">
+        <div class="article-image">
+          <img src="Ukrainedemo.jpg" alt="South Bloc Reports" />
+        </div>
+        <div class="article-content">
+          <div class="article-category mono">WARFARE</div>
+          <div class="article-body">
+            <span class="article-date mono">11 MAY 2026</span>
+            <h3>UKRAINE’S DEMOGRAPHIC COLLAPSE IN NUMBERS</h3>
+            <p>Ukraine’s population trajectory shows the scale of long-term demographic damage accelerated by war.</p>
+            <div class="article-actions">
+              <a href="https://x.com/SouthBlocReport/status/2053842434464141361?s=20" target="_blank"
+                rel="noopener noreferrer" class="btn btn-sm btn-primary">Read full article</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+
+
+      <article class="article-card" data-category="warfare">
+        <div class="article-image">
+          <img src="USwar.jpg" alt="South Bloc Reports" />
+        </div>
+        <div class="article-content">
+          <div class="article-category mono">WARFARE</div>
+          <div class="article-body">
+            <span class="article-date mono">03 MAY 2026</span>
+            <h3>America Doesn’t Lose Wars. Its Politicians Do.</h3>
+            <p>One recurring pattern in modern U.S. military history post the second world war is the constant
+              intersection between military planning and political decision-making. The issue is not about the
+              capability of the United States...</p>
+            <div class="article-actions">
+              <a href="https://x.com/SouthBlocReport/status/2050790357642973401?s=20" target="_blank"
+                rel="noopener noreferrer" class="btn btn-sm btn-primary">Read full
+                article</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  </section>
+
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">SBR</span>
+        <p class="footer-tagline">Terrorism · Geo-Politics · Warfare · Intelligence</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#articles">Intel Feed</a>
+      </div>
+      <div class="footer-contact">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:southblocreports7@gmail.com" class="mono">southblocreports7@gmail.com</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span>, SOUTH BLOC REPORTS. Developed by <strong>Niranjan Simha
+            DH</strong>.</p>
+        <p class="mono footer-disclaimer">All analysis is based on open-source intelligence. For informational purposes
+          only.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
