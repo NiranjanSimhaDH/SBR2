@@ -122,7 +122,13 @@
 
       <div class="hero-actions fade-in-up delay-2">
         <a href="#articles" class="btn btn-primary">Access Intel Feed</a>
-        <a href="#about" class="btn btn-ghost">Learn More</a>
+        <a href="#navbar" class="btn btn-red-glow" onclick="openElectionsMenu();">ELECTIONS</a>
+      </div>
+
+      <div class="hero-ticker-wrap fade-in-up delay-2">
+        <div class="hero-ticker-content">
+          <span class="ticker-icon"></span> ELECTIONS PAGE UPDATES <span class="ticker-icon"></span>
+        </div>
       </div>
     </div>
 
@@ -849,6 +855,29 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== FLOATING UPDATE WIDGET ==================== -->
+  <div class="floating-update-widget">
+    <a href="poll-analysis.html" class="widget-link">
+      <span class="widget-dot"></span>
+      <span class="widget-text">
+        <span class="widget-title">[UPDATE]</span>
+        <span class="widget-subtitle">ISRAEL ELECTIONS 2026 TRACKER &rarr;</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- ==================== SYSTEM ALERT TOAST ==================== -->
+  <div id="systemAlertToast">
+    <a href="poll-analysis.html" class="toast-link">
+      <span class="toast-content">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toast-icon"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>UPDATE - Elections Page updated, Do check it out</span>
+      </span>
+    </a>
+    <button onclick="dismissSystemAlert()" class="toast-close">&times;</button>
+  </div>
+
   <script src="config.js"></script>
   <script src="script.js"></script>
 </body>

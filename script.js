@@ -481,3 +481,55 @@ window.addEventListener('DOMContentLoaded', loadAdminArticles);
 
 // Listen for changes (Optional: Supabase has Realtime but this simple fetch works well)
 window.addEventListener('focus', loadAdminArticles);
+
+/* ==================== ELECTIONS DROPDOWN & SYSTEM ALERT ==================== */
+function openElectionsMenu() {
+  const nl = document.getElementById('navLinks');
+  const nt = document.getElementById('navToggle');
+  const nd = document.querySelector('.nav-dropdown');
+  const ar = document.querySelector('.dropdown-toggle .arrow');
+
+  if (window.innerWidth <= 1024) {
+    // Mobile behavior: Open hamburger menu and expand dropdown
+    if (nl && nt && !nl.classList.contains('open')) {
+      nt.click();
+    }
+    if (nd && !nd.classList.contains('mobile-open')) {
+      nd.classList.add('mobile-open');
+      if (ar) ar.classList.add('rotated');
+    }
+  } else {
+    // Desktop behavior: Show hover effect programmatically for 4 seconds
+    if (nd) {
+      nd.style.opacity = '1'; 
+      nd.style.visibility = 'visible'; 
+      nd.style.transform = 'translateX(-50%) translateY(0)'; 
+    }
+    if (ar) { 
+      ar.style.transform = 'rotate(180deg)'; 
+      ar.style.color = 'var(--gold-bright)'; 
+    }
+    setTimeout(() => { 
+      if (nd) nd.style = ''; 
+      if (ar) ar.style = ''; 
+    }, 4000);
+  }
+}
+
+function dismissSystemAlert() {
+  const alert = document.getElementById('systemAlertToast');
+  if (alert) {
+    alert.style.top = '-100px';
+    alert.style.opacity = '0';
+  }
+}
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const alert = document.getElementById('systemAlertToast');
+    if (alert) {
+      alert.style.top = '80px';
+      alert.style.opacity = '1';
+    }
+  }, 1000); // 1s delay after page load so it catches attention
+});

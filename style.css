@@ -2506,3 +2506,183 @@ a {
     cursor: pointer;
   }
 }
+
+/* ==================== HERO ACTIONS (ELECTIONS) ==================== */
+.btn-red-glow {
+  background: rgba(204, 0, 0, 0.15);
+  color: #ff4d4d;
+  border: 2px solid #cc0000;
+  box-shadow: 0 0 15px rgba(204, 0, 0, 0.5);
+  animation: red-btn-pulse 2s infinite;
+  text-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+.btn-red-glow::before {
+  background: #cc0000;
+}
+.btn-red-glow:hover {
+  color: #ffffff;
+  border-color: #ff4d4d;
+  box-shadow: 0 0 30px rgba(204, 0, 0, 0.9);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  animation: none;
+}
+@keyframes red-btn-pulse {
+  0% { box-shadow: 0 0 10px rgba(204, 0, 0, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 25px rgba(204, 0, 0, 0.8); transform: scale(1.02); }
+  100% { box-shadow: 0 0 10px rgba(204, 0, 0, 0.4); transform: scale(1); }
+}
+
+/* ==================== HERO TICKER ==================== */
+.hero-ticker-wrap {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  background: rgba(204, 0, 0, 0.05);
+  border-left: 2px solid #cc0000;
+  border-right: 2px solid #cc0000;
+  border-top: 1px solid rgba(204,0,0,0.2);
+  border-bottom: 1px solid rgba(204,0,0,0.2);
+  padding: 10px 0;
+  position: relative;
+}
+.hero-ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  color: #ff4d4d;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  animation: ticker-scroll 12s linear infinite;
+}
+@keyframes ticker-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.ticker-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #cc0000;
+  border-radius: 50%;
+  margin: 0 12px;
+  box-shadow: 0 0 6px #cc0000;
+  vertical-align: middle;
+}
+
+/* ==================== FLOATING UPDATE WIDGET ==================== */
+.floating-update-widget {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 9999;
+  background: rgba(13, 18, 9, 0.95);
+  border: 1px solid rgba(204, 0, 0, 0.5);
+  padding: 16px 24px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(204,0,0,0.15);
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.8s ease 1.5s both;
+}
+.floating-update-widget:hover {
+  background: rgba(20, 10, 10, 0.95) !important;
+  border-color: #cc0000 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.9), 0 0 25px rgba(204,0,0,0.3) !important;
+}
+.floating-update-widget:hover .widget-title {
+  color: #fff !important;
+}
+.floating-update-widget:hover .widget-subtitle {
+  color: #fff !important;
+}
+.widget-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.widget-dot {
+  width: 10px;
+  height: 10px;
+  background: #cc0000;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #cc0000;
+  animation: red-btn-pulse 2s infinite;
+}
+.widget-text {
+  display: flex;
+  flex-direction: column;
+}
+.widget-title {
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.widget-subtitle {
+  color: #a09870;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== SYSTEM ALERT TOAST ==================== */
+#systemAlertToast {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  background: rgba(204, 0, 0, 0.95);
+  border: 1px solid #ff4d4d;
+  padding: 14px 20px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(204,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
+  opacity: 0;
+  width: 90%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+.toast-link {
+  text-decoration: none;
+  flex: 1;
+}
+.toast-content {
+  font-family: var(--font-mono);
+  color: #fff;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+.toast-icon {
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.toast-close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  outline: none;
+  transition: color 0.3s;
+  flex-shrink: 0;
+}
+.toast-close:hover {
+  color: #fff;
+}
