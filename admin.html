@@ -10,7 +10,7 @@
     rel="stylesheet" />
   <!-- Supabase Library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
+
   <style>
     :root {
       --bg-primary: #0d1209;
@@ -111,6 +111,7 @@
       body {
         cursor: auto !important;
       }
+
       .custom-cursor,
       .custom-cursor-dot {
         display: none !important;
@@ -1193,11 +1194,11 @@
       <div class="auth-sub">Authorized personnel only. Enter access credentials.</div>
       <div class="auth-field">
         <label>OPERATOR EMAIL</label>
-        <input type="email" id="authUser" placeholder="Enter secure email address" autocomplete="off" />
+        <input type="email" id="authUser" placeholder="Enter email address" autocomplete="off" />
       </div>
       <div class="auth-field">
         <label>ACCESS CODE</label>
-        <input type="password" id="authPass" placeholder="Enter access code" />
+        <input type="password" id="authPass" placeholder="Enter password" />
       </div>
       <div class="auth-error" id="authError">⚠ INVALID CREDENTIALS — ACCESS DENIED</div>
       <button class="btn-auth" id="authBtn">AUTHENTICATE →</button>
@@ -1371,7 +1372,7 @@
     if (SUPABASE_URL && SUPABASE_KEY) {
       try {
         db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-      } catch(e) {
+      } catch (e) {
         console.warn('Supabase init failed:', e);
       }
     } else {
@@ -1383,7 +1384,7 @@
     const cursorDot = document.getElementById('cursorDot');
     let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
     let cursorVisible = false;
-    
+
     const isTouchDevice = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches || ('ontouchstart' in window);
 
     if (!isTouchDevice() && cursor && cursorDot) {
@@ -1398,7 +1399,7 @@
           curX = e.clientX;
           curY = e.clientY;
         }
-        mouseX = e.clientX; 
+        mouseX = e.clientX;
         mouseY = e.clientY;
       });
       (function anim() {
