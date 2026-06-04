@@ -1192,8 +1192,8 @@
       <div class="auth-title">COMMAND INTERFACE</div>
       <div class="auth-sub">Authorized personnel only. Enter access credentials.</div>
       <div class="auth-field">
-        <label>OPERATOR ID</label>
-        <input type="text" id="authUser" placeholder="Enter operator ID" autocomplete="off" />
+        <label>OPERATOR EMAIL</label>
+        <input type="email" id="authUser" placeholder="Enter secure email address" autocomplete="off" />
       </div>
       <div class="auth-field">
         <label>ACCESS CODE</label>
@@ -1216,6 +1216,7 @@
       <div class="topbar-right">
         <div class="live-dot"></div>
         <span class="live-label">SESSION ACTIVE</span>
+        <button id="logoutBtn" class="back-link" style="background:transparent; cursor:pointer;">LOGOUT ✕</button>
         <a href="index.html" class="back-link">← MAIN SITE</a>
       </div>
     </nav>
@@ -1418,7 +1419,29 @@
     document.getElementById('authBtn').addEventListener('click', authenticate);
     document.getElementById('authPass').addEventListener('keydown', e => { if (e.key === 'Enter') authenticate(); });
 
+    async function checkSession() {
+      if (!db) return;
+      const { data: { session }, error } = await db.auth.getSession();
+      if (session) {
+        showAdminPanel();
+      }
+    }
+    checkSession();
+
+    function showAdminPanel() {
+      document.getElementById('authScreen').style.opacity = '0';
+      document.getElementById('authScreen').style.transition = 'opacity .5s';
+      setTimeout(() => {
+        document.getElementById('authScreen').style.display = 'none';
+        document.getElementById('adminMain').style.display = 'block';
+      }, 500);
+    }
+
     async function authenticate() {
+      if (!db) {
+        alert("Supabase not initialized.");
+        return;
+      }
       const u = document.getElementById('authUser').value.trim();
       const p = document.getElementById('authPass').value;
       const btn = document.getElementById('authBtn');
@@ -1431,29 +1454,23 @@
       btn.disabled = true;
 
       try {
-        // Query the 'authenticate' table in Supabase
-        const { data, error } = await db
-          .from('authenticate')
-          .select('*')
-          .eq('usr', u)
-          .eq('pass', p)
-          .single();
+        // Authenticate using Supabase Auth
+        const { data, error } = await db.auth.signInWithPassword({
+          email: u,
+          password: p
+        });
 
-        if (error || !data) {
-          throw new Error('Invalid credentials');
+        if (error || !data.user) {
+          throw error || new Error('Invalid credentials');
         }
 
         // Success
-        document.getElementById('authScreen').style.opacity = '0';
-        document.getElementById('authScreen').style.transition = 'opacity .5s';
-        setTimeout(() => {
-          document.getElementById('authScreen').style.display = 'none';
-          document.getElementById('adminMain').style.display = 'block';
-        }, 500);
+        showAdminPanel();
 
       } catch (e) {
         // Failure
         err.style.display = 'block';
+        err.textContent = '⚠ ' + (e.message || 'INVALID CREDENTIALS — ACCESS DENIED').toUpperCase();
         document.getElementById('authUser').style.borderColor = 'var(--red-alert)';
         document.getElementById('authPass').style.borderColor = 'var(--red-alert)';
 
@@ -1466,6 +1483,14 @@
         btn.textContent = 'AUTHENTICATE →';
         btn.disabled = false;
       }
+    }
+
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', async () => {
+        if (db) await db.auth.signOut();
+        location.reload();
+      });
     }
 
     /* ══ TIME ══ */
