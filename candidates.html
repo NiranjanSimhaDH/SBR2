@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBR - Candidates Dossier</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script src="logo.js?v=2"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="logo.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+  <meta name="description"
+    content="Election candidate profiles and dossiers — South Bloc Reports strategic election briefing." />
+  <link rel="stylesheet" href="candidates.css" />
+</head>
+
+<body>
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- CURSOR -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-text">SOUTH BLOC REPORTS</span>
+        <span class="logo-line"></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#about" class="nav-link" data-label="01">About Us</a>
+        <a href="index.html#approach" class="nav-link" data-label="02">Our Approach</a>
+        <a href="index.html#services" class="nav-link" data-label="03">Services</a>
+        <a href="index.html#projects" class="nav-link" data-label="04">Projects</a>
+        <a href="index.html#articles" class="nav-link" data-label="05">Intel Feed</a>
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link dropdown-toggle" data-label="06">Elections <span class="arrow">▼</span></a>
+          <div class="nav-dropdown">
+            <a href="candidates.html" class="dropdown-item">Candidates</a>
+            <a href="party.html" class="dropdown-item">Party</a>
+            <a href="news.html" class="dropdown-item">News</a>
+            <a href="poll-analysis.html" class="dropdown-item">Poll &amp; Analysis</a>
+          </div>
+        </div>
+        <a href="admin.html" class="nav-link cta-link">Admin Login</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== CANDIDATES HERO ==================== -->
+  <div class="elections-hero">
+    <div class="section-tag mono">// ELECTIONS — CANDIDATE DOSSIERS</div>
+    <h1>Election <em>Candidates.</em></h1>
+    <p class="elections-intro">Strategic profiles of key electoral candidates — covering political affiliations, geopolitical positioning, policy trajectories, and risk assessments relevant to regional and global stability.</p>
+    <div class="elections-divider"></div>
+  </div>
+
+  <div class="candidates-section">
+    <div class="candidates-grid">
+
+      <!-- Candidate 1 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Benjamin-Netanyahu_can1.jpg" alt="Benjamin Netanyahu" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Benjamin Netanyahu</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Benjamin Netanyahu</h2>
+            <div class="candidate-affiliation">Likud Party</div>
+            <p class="candidate-desc">The incumbent Prime Minister and longest-serving leader in Israeli history, whose campaign centers on security dominance and political survival.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 2 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/aryeh_deri_can2.jpg" alt="Aryeh Deri" class="candidate-photo-large" style="object-position: top;" />
+            </div>
+            <h2 class="candidate-name-front">Aryeh Deri</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Aryeh Deri</h2>
+            <div class="candidate-affiliation">Shas</div>
+            <p class="candidate-desc">A veteran political operator leading the ultra-Orthodox Mizrahi community, focused heavily on securing social welfare budgets and religious status quo protections.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 3 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Yitzchak_Goldknopf_can3.jpg" alt="Yitzchak Goldknopf" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Yitzchak Goldknopf</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Yitzchak Goldknopf</h2>
+            <div class="candidate-affiliation">United Torah Judaism</div>
+            <p class="candidate-desc">The leader of the Ashkenazi ultra-Orthodox faction, dedicated almost entirely to shielding Haredi yeshiva students from mandatory military conscription.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 4 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Itamar_Ben_Gvir_can4.jpg" alt="Itamar Ben Gvir" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Itamar Ben Gvir</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Itamar Ben Gvir</h2>
+            <div class="candidate-affiliation">Otzma Yehudit</div>
+            <p class="candidate-desc">The hardline firebrand Minister of National Security who commands the ultra-nationalist voter base with an uncompromising "law and order" and pro-settlement agenda.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 5 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Bezalel_Smotrich_can5.jpg" alt="Bezalel Smotrich" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Bezalel Smotrich</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Bezalel Smotrich</h2>
+            <div class="candidate-affiliation">Religious Zionism</div>
+            <p class="candidate-desc">The current Finance Minister who represents the ideological core of the West Bank settler movement, advocating for deeper territorial annexation and conservative fiscal policy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 6 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Gideon_Sa'ar,_can6.jpg" alt="Gideon Sa'ar" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Gideon Sa'ar</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Gideon Sa'ar</h2>
+            <div class="candidate-affiliation">New Hope</div>
+            <p class="candidate-desc">A right-wing hawk who recently merged his "New Hope" faction directly into Likud to shore up Netanyahu's nationalist flank ahead of the vote.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 7 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Avi_mauz_can7.jpeg" alt="Avi Maoz" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Avi Maoz</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Avi Maoz</h2>
+            <div class="candidate-affiliation">Noam</div>
+            <p class="candidate-desc">A hard-right ultra-conservative leading a single-seat faction dedicated to institutionalizing ultra-Orthodox religious values in state education.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 8 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Naftali_Bennett_can8.jpg" alt="Naftali Bennett" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Naftali Bennett</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Naftali Bennett</h2>
+            <div class="candidate-affiliation">Together</div>
+            <p class="candidate-desc">The former Prime Minister who has launched a massive political comeback under his new "Together" banner, positioning himself as the premier, hawkish, post-Netanyahu center-right alternative.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 9 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Yair_Lapid_can9.jpg" alt="Yair Lapid" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Yair Lapid</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Yair Lapid</h2>
+            <div class="candidate-affiliation">Together</div>
+            <p class="candidate-desc">The official Leader of the Opposition and leader of the secular centrist core, who has structurally aligned his faction with Naftali Bennett to form a massive joint list designed to unseat Likud.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 10 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/benny_gantz_can10.jpg" alt="Benny Gantz" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Benny Gantz</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Benny Gantz</h2>
+            <div class="candidate-affiliation">Blue and White</div>
+            <p class="candidate-desc">The former Defense Minister and War Cabinet member who pitches himself as a centrist, stabilizing security authority aimed at traditional and moderate voters.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 11 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/avigdor-lieberman_can11.webp" alt="Avigdor Lieberman" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Avigdor Lieberman</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Avigdor Lieberman</h2>
+            <div class="candidate-affiliation">Yisrael Beytenu</div>
+            <p class="candidate-desc">A fiercely secular right-wing nationalist whose primary campaign message demands immediate, universal military enlistment for the ultra-Orthodox population.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 12 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Yair_Golan_can12.jpg" alt="Yair Golan" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Yair Golan</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Yair Golan</h2>
+            <div class="candidate-affiliation">The Democrats</div>
+            <p class="candidate-desc">A former IDF Deputy Chief of Staff who successfully permanently merged the historic Labor and Meretz parties into a single, unified Zionist Left-wing powerhouse called "The Democrats."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 13 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Yousef_Jabareen_can13.png" alt="Yousef Jabareen" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Yousef Jabareen</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Yousef Jabareen</h2>
+            <div class="candidate-affiliation">Hadash-Ta'al</div>
+            <p class="candidate-desc">The newly elected chairman of the secular, Arab-Jewish socialist front who won a highly contested party primary, replacing veteran lawmaker Ayman Odeh as the face of the faction.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 14 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/Mansour_Abbas,_can14.jpg" alt="Mansour Abbas" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">Mansour Abbas</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">Mansour Abbas</h2>
+            <div class="candidate-affiliation">Ra'am</div>
+            <p class="candidate-desc">The pioneer of pragmatic Arab politics who is running for the last time while introducing a historic change: actively inviting Jewish candidates to join his Islamist party list to maximize electoral appeal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate 15 -->
+      <div class="candidate-cell">
+        <div class="candidate-card">
+          <div class="candidate-front">
+            <div class="candidate-photo-container">
+              <img src="candidates/gadi_eisenkot_can15.jpg" alt="Gadi Eisenkot" class="candidate-photo-large" />
+            </div>
+            <h2 class="candidate-name-front">​Gadi Eisenkot</h2>
+          </div>
+          <div class="candidate-back">
+            <h2 class="candidate-name">​Gadi Eisenkot</h2>
+            <div class="candidate-affiliation">Yashar</div>
+            <p class="candidate-desc">A highly respected former IDF Chief of Staff whose surging personal popularity and independent reformist list have positioned him as a premier, security-first contender for the Premiership.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">SBR</span>
+        <p class="footer-tagline">Terrorism · Geo-Politics · Warfare · Intelligence</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#articles">Intel Feed</a>
+        <a href="candidates.html">Candidates</a>
+      </div>
+      <div class="footer-contact">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:southblocreports7@gmail.com" class="mono">southblocreports7@gmail.com</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span>, SOUTH BLOC REPORTS. Developed by <strong>Niranjan Simha
+            DH</strong>.</p>
+        <p class="mono footer-disclaimer">All analysis is based on open-source intelligence. For informational purposes
+          only.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="candidates.js?v=2"></script>
+</body>
+
+</html>

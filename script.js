@@ -3,38 +3,52 @@
    ============================================= */
 
 /* ══ SUPABASE CONFIG ══ */
-const SUPABASE_URL = window.CONFIG?.SUPABASE_URL;
-const SUPABASE_KEY = window.CONFIG?.SUPABASE_KEY;
-const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const SUPABASE_URL = window.CONFIG?.SUPABASE_URL || '';
+const SUPABASE_KEY = window.CONFIG?.SUPABASE_KEY || '';
+let db = null;
+if (SUPABASE_URL && SUPABASE_KEY) {
+  try {
+    db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  } catch(e) {
+    console.warn('Supabase init failed:', e);
+  }
+} else {
+  console.warn('Supabase credentials missing. Admin features may not work.');
+}
 
 /* ==================== CUSTOM CURSOR (desktop only) ==================== */
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
-let mouseX = 0, mouseY = 0;
-let curX = 0, curY = 0;
+let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
+let cursorVisible = false;
 
-const isTouchDevice = () =>
-  window.matchMedia('(hover: none) and (pointer: coarse)').matches ||
-  ('ontouchstart' in window);
+const isTouchDevice = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches || ('ontouchstart' in window);
 
-if (!isTouchDevice()) {
+if (!isTouchDevice() && cursor && cursorDot) {
+  cursor.style.opacity = '0';
+  cursorDot.style.opacity = '0';
+
   document.addEventListener('mousemove', e => {
+    if (!cursorVisible) {
+      cursorVisible = true;
+      cursor.style.opacity = '1';
+      cursorDot.style.opacity = '1';
+      curX = e.clientX;
+      curY = e.clientY;
+    }
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top = mouseY + 'px';
   });
 
   function animateCursor() {
     curX += (mouseX - curX) * 0.12;
     curY += (mouseY - curY) * 0.12;
-    cursor.style.left = curX + 'px';
-    cursor.style.top = curY + 'px';
+    cursor.style.transform = `translate3d(${curX}px, ${curY}px, 0) translate(-50%, -50%)`;
+    cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
-} else {
-  /* Hide cursor elements on touch devices */
+} else if (cursor && cursorDot) {
   cursor.style.display = 'none';
   cursorDot.style.display = 'none';
 }
@@ -89,7 +103,7 @@ navToggle.addEventListener('click', () => {
 });
 
 // Close nav on link click
-document.querySelectorAll('.nav-link').forEach(link => {
+document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
     navToggle.querySelectorAll('span').forEach(s => {
@@ -97,6 +111,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
   });
 });
+
+const dt = document.querySelector('.dropdown-toggle');
+const nd = document.querySelector('.nav-dropdown');
+if (dt && nd) { 
+  dt.addEventListener('click', e => { 
+    if (window.innerWidth <= 768) { 
+      e.preventDefault(); 
+      const io = nd.classList.toggle('mobile-open'); 
+      const a = dt.querySelector('.arrow'); 
+      if (a) a.classList.toggle('rotated', io); 
+    } 
+  }); 
+}
 
 /* ==================== STATS COUNTER ==================== */
 function animateCounter(el, target, duration = 2000) {
@@ -347,6 +374,10 @@ console.log('%c © 2026 — Developed by Niranjan Simha DH ', 'color:#5a5438;fon
 /* ==================== SBR ADMIN INTEGRATION ==================== */
 /* Loads articles published via admin.html from Supabase into the Intel Feed grid */
 async function loadAdminArticles() {
+  if (!db) {
+    console.warn('Supabase db is not initialized. Cannot load articles.');
+    return;
+  }
   // Fetch from Supabase
   const { data: stored, error } = await db
     .from('articles')

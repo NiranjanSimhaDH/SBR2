@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Party Analysis — South Bloc Reports</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script src="logo.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="logo.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+  <meta name="description" content="Electoral party platforms and coalition analysis — South Bloc Reports." />
+  <link rel="stylesheet" href="party.css?v=2" />
+</head>
+
+<body>
+  <div class="noise-overlay"></div>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-text">SOUTH BLOC REPORTS</span>
+        <span class="logo-line"></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#about" class="nav-link" data-label="01">About Us</a>
+        <a href="index.html#approach" class="nav-link" data-label="02">Our Approach</a>
+        <a href="index.html#services" class="nav-link" data-label="03">Services</a>
+        <a href="index.html#projects" class="nav-link" data-label="04">Projects</a>
+        <a href="index.html#articles" class="nav-link" data-label="05">Intel Feed</a>
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link dropdown-toggle" data-label="06">Elections <span class="arrow">▼</span></a>
+          <div class="nav-dropdown">
+            <a href="candidates.html" class="dropdown-item">Candidates</a>
+            <a href="party.html" class="dropdown-item">Party</a>
+            <a href="news.html" class="dropdown-item">News</a>
+            <a href="poll-analysis.html" class="dropdown-item">Poll &amp; Analysis</a>
+          </div>
+        </div>
+        <a href="admin.html" class="nav-link cta-link">Admin Login</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="elections-hero">
+    <div class="section-tag mono">// ELECTIONS — PARTY PLATFORMS</div>
+    <h1>Electoral <em>Parties.</em></h1>
+    <p class="elections-intro">Coalition platforms, ideological positioning, and strategic assessments of the key
+      political formations contesting the electoral cycle.</p>
+    <div class="elections-divider"></div>
+  </div>
+
+  <div class="party-section">
+    <div class="party-grid">
+
+      <!-- Party 1 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Likud_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">LIKUD</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">LIKUD</h2>
+            <p class="party-desc">The primary national-conservative ruling party of Israel, combining traditional
+              security hawkishness, free-market economics, and absolute loyalty to Benjamin Netanyahu.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 2 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Together_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Together Party</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Together Party</h2>
+            <p class="party-desc">The newly forged political super-list that merges Naftali Bennett’s nationalist base
+              with Yair Lapid’s secular centrist voters to create a massive bloc designed to replace Likud.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 3 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Shas_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Shas</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Shas</h2>
+            <p class="party-desc">A powerful ultra-Orthodox religious party serving the Mizrahi (Middle Eastern and
+              North African) Jewish population, prioritizing social welfare and state-backed clerical control.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 4 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Blue_and_White_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Blue and White - National Unity</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Blue and White - National Unity</h2>
+            <p class="party-desc">A centrist, security-first political alliance led by former military chiefs that
+              positions itself as a stabilizing, institutional alternative for moderate traditionalist.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 5 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Religious_Zionist_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Religious Zionism</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Religious Zionism</h2>
+            <p class="party-desc">An ideological right-wing party representing the West Bank settler movement,
+              advocating for territorial annexation and the integration of biblical values into state institutions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 6 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/United_Torah_Judaism_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">United Torah Judaism (UTJ)</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">United Torah Judaism (UTJ)</h2>
+            <p class="party-desc">An alliance of Ashkenazi (European) ultra-Orthodox factions entirely dedicated to
+              protecting traditional Torah study, securing state education funding, and enforcing military draft
+              exemptions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 7 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Otzma_Yehudit_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Otzma Yehudit</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Otzma Yehudit</h2>
+            <p class="party-desc"> A hardline, populist ultra-nationalist party focused on aggressive counter-terrorism,
+              uncompromising law-and-order policies, and expanding state sovereignty.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 8 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Yisrael_Beytenu_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Yisrael Beytenu</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Yisrael Beytenu</h2>
+            <p class="party-desc">A secular, right-wing nationalist party that combines a hardline stance on regional
+              defense with an aggressive push to end ultra-Orthodox institutional privileges.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 9 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/The_Democrats_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">The Democrats</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">The Democrats</h2>
+            <p class="party-desc">The newly established powerhouse of the Zionist Left, created through a permanent
+              merger of the historic Labor and Meretz parties to fight for liberal democracy and democratic state
+              institutions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 10-->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Yashar_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Yashar</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Yashar</h2>
+            <p class="party-desc">A brand-new reformist list launched by former IDF Chief Gadi Eisenkot, focusing
+              strictly on institutional integrity, military readiness, and anti-corruption governance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 11 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Hadash_Ta'al_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Hadash-Ta'al</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Hadash-Ta'al</h2>
+            <p class="party-desc">A secular, joint Arab-Jewish socialist alliance that campaigns heavily for civil
+              equality, minority rights, and a diplomatic end to the Israeli-Palestinian conflict.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 12 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Balad_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Balad</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Balad</h2>
+            <p class="party-desc">A hardline Palestinian nationalist party that firmly rejects participation in any
+              Zionist governing coalition, advocating instead for transforming Israel into a binational "state of all
+              its citizens".</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 13 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/Noam_party.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Noam</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Noam</h2>
+            <p class="party-desc"> A small, ultra-conservative religious faction dedicated exclusively to promoting
+              traditional family structures and combating secular liberal influences within public education.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Party 14 -->
+      <div class="party-cell">
+        <div class="party-card">
+          <!-- Front Side -->
+          <div class="party-front">
+            <div class="party-logo-container">
+              <img src="party/United_Arab_List.svg.png" alt="Party Logo" class="party-logo-large" />
+            </div>
+            <h2 class="party-name-front">Ra'am</h2>
+          </div>
+          <!-- Back Side -->
+          <div class="party-back">
+            <div class="party-header-back">
+              <img src="logo.jpeg" alt="Party Logo" class="party-logo-small" />
+            </div>
+            <h2 class="party-name">Ra'am</h2>
+            <p class="party-desc">An Islamist faction that pioneered a pragmatic approach to Israeli governance, willing
+              to join ruling coalitions in exchange for domestic budgets to combat crime and build infrastructure in
+              Arab towns.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">SBR</span>
+        <p class="footer-tagline">Terrorism · Geo-Politics · Warfare · Intelligence</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#articles">Intel Feed</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="party.html">Party</a>
+      </div>
+      <div class="footer-contact">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:southblocreports7@gmail.com" class="mono">southblocreports7@gmail.com</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span>, SOUTH BLOC REPORTS. Developed by <strong>Niranjan Simha
+            DH</strong>.</p>
+        <p class="mono footer-disclaimer">All analysis is based on open-source intelligence. For informational purposes
+          only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="party.js?v=2"></script>
+</body>
+
+</html>

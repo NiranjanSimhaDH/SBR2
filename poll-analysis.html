@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poll Analysis — South Bloc Reports</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script src="logo.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="logo.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+  <meta name="description"
+    content="Israel Knesset election poll data, coalition bloc analysis, and strategic projection for the 26th Knesset — South Bloc Reports." />
+  <link rel="stylesheet" href="poll-analysis.css?v=2" />
+</head>
+
+<body>
+  <div class="noise-overlay"></div>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-text">SOUTH BLOC REPORTS</span>
+        <span class="logo-line"></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#about" class="nav-link" data-label="01">About Us</a>
+        <a href="index.html#approach" class="nav-link" data-label="02">Our Approach</a>
+        <a href="index.html#services" class="nav-link" data-label="03">Services</a>
+        <a href="index.html#projects" class="nav-link" data-label="04">Projects</a>
+        <a href="index.html#articles" class="nav-link" data-label="05">Intel Feed</a>
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link dropdown-toggle" data-label="06">Elections <span class="arrow">▼</span></a>
+          <div class="nav-dropdown">
+            <a href="candidates.html" class="dropdown-item">Candidates</a>
+            <a href="party.html" class="dropdown-item">Party</a>
+            <a href="news.html" class="dropdown-item">News</a>
+            <a href="poll-analysis.html" class="dropdown-item">Poll &amp; Analysis</a>
+          </div>
+        </div>
+        <a href="admin.html" class="nav-link cta-link">Admin Login</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="dashboard-wrapper">
+    <div class="elections-hero">
+      <div class="section-tag mono">// ELECTIONS — ISRAEL KNESSET POLLING &amp; PROJECTIONS</div>
+      <h1>Israel Knesset <em>Poll &amp; Analysis.</em></h1>
+      <p class="elections-intro">Aggregated Knesset polling data, coalition bloc trajectories, and strategic risk
+        assessments providing a structured intelligence view of the Israeli electoral race ahead of the 26th Knesset
+        elections.</p>
+      <div class="elections-divider"></div>
+    </div>
+
+    <div class="poll-section">
+      <div class="poll-layout">
+
+        <!-- Poll Widget -->
+        <!-- Poll & Infographic Widget -->
+        <div>
+          <div class="poll-widget" id="pollWidget">
+            <div class="poll-widget-header">
+              <div class="poll-widget-title mono">// 26TH KNESSET — SEAT PROJECTIONS</div>
+              <h2>Electoral Forecast</h2>
+            </div>
+
+            <!-- Custom Dropdown Selector -->
+            <div class="poll-dropdown-container">
+              <div class="custom-select" id="pollDropdown">
+                <div class="custom-select-trigger" id="pollDropdownTrigger">
+                  <span>SBR Combined Index (Average)</span>
+                  <span class="arrow-icon">▼</span>
+                </div>
+                <div class="custom-select-menu" id="pollDropdownMenu">
+                  <div class="custom-select-item active" data-value="sbr_average">SBR Combined Index (Average)</div>
+                  <div class="custom-select-item" data-value="channel12">Channel 12 News Poll</div>
+                  <div class="custom-select-item" data-value="kan_news">Kan News Public Broadcast</div>
+                  <div class="custom-select-item" data-value="i24_direct">i24 News / Direct Polls</div>
+                  <div class="custom-select-item" data-value="times_israel">Times of Israel Tracker</div>
+                  <div class="custom-select-item" data-value="jpost_maariv">Jerusalem Post / Maariv</div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Coalition Breakdown Section -->
+            <div class="bloc-breakdown-container">
+              <div class="bloc-breakdown-title mono">// BREAKDOWN BY POLITICAL BLOC</div>
+              <div class="bloc-leader-comparison">
+                <div class="leader-item vance-item">
+                  <div class="leader-avatar-container">
+                    <img src="party/Likud_party.png" alt="Netanyahu Coalition" class="leader-avatar" />
+                    <div class="scanline"></div>
+                  </div>
+                  <div class="leader-text">
+                    <div class="leader-name">Netanyahu Coalition</div>
+                    <div class="leader-seats seats-vance" id="vanceSeatsText">51</div>
+                  </div>
+                </div>
+
+                <div class="leader-item rostova-item">
+                  <div class="leader-text text-right">
+                    <div class="leader-name">Opposition Bloc</div>
+                    <div class="leader-seats seats-rostova" id="rostovaSeatsText">59</div>
+                  </div>
+                  <div class="leader-avatar-container">
+                    <img src="party/Together_party.png" alt="Opposition Bloc" class="leader-avatar" />
+                    <div class="scanline"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Segmented Coalition Progress Bar -->
+              <div class="coalition-bar-wrapper">
+                <div class="coalition-bar-track">
+                  <div class="coalition-bar-segment seg-vance" id="segVance" style="width: 34.2%;"></div>
+                  <div class="coalition-bar-segment seg-sterling" id="segSterling" style="width: 8.3%;"></div>
+                  <div class="coalition-bar-segment seg-neutral" id="segNeutral" style="width: 8.3%;"></div>
+                  <div class="coalition-bar-segment seg-rostova" id="segRostova" style="width: 49.2%;"></div>
+                </div>
+                <div class="majority-threshold-line" style="left: 50.83%;"> <!-- 61/120 = 50.83% -->
+                  <div class="majority-text mono">61 SEATS MAJORITY</div>
+                </div>
+              </div>
+
+              <!-- Coalition Legend -->
+              <div class="coalition-legend mono">
+                <div class="legend-item">
+                  <span class="legend-dot dot-vance"></span>
+                  <span>Netanyahu Coalition</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-sterling"></span>
+                  <span>Religious Nationalist</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-neutral"></span>
+                  <span>Arab / Non-Aligned</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot dot-rostova"></span>
+                  <span>Opposition Bloc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Party breakdown list -->
+            <div class="party-breakdown-section">
+              <div class="party-breakdown-header mono">// DETAILED PARTY SEATS — KNESSET (120 TOTAL)</div>
+              <div class="party-list" id="partyList">
+                <!-- Hardcoded default view for SBR Combined Index -->
+                <div class="party-row-item" data-seats="23.0" data-bloc="vance">
+                  <div class="party-info">
+                    <span class="party-name-label">Likud</span>
+                    <span class="party-bloc-sub-label mono">// Netanyahu Coalition</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-vance" style="width: 92%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">23.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="22.5" data-bloc="rostova">
+                  <div class="party-info">
+                    <span class="party-name-label">Together (BeYachad)</span>
+                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-rostova" style="width: 90%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">22.5</div>
+                </div>
+
+                <div class="party-row-item" data-seats="17.0" data-bloc="rostova">
+                  <div class="party-info">
+                    <span class="party-name-label">Yashar</span>
+                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-rostova" style="width: 68%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">17.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="10.0" data-bloc="rostova">
+                  <div class="party-info">
+                    <span class="party-name-label">Yisrael Beiteinu</span>
+                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-rostova" style="width: 40%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">10.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="9.5" data-bloc="rostova">
+                  <div class="party-info">
+                    <span class="party-name-label">The Democrats</span>
+                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-rostova" style="width: 38%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">9.5</div>
+                </div>
+
+                <div class="party-row-item" data-seats="9.0" data-bloc="vance">
+                  <div class="party-info">
+                    <span class="party-name-label">Shas</span>
+                    <span class="party-bloc-sub-label mono">// Netanyahu Coalition</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-vance" style="width: 36%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">9.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="8.0" data-bloc="vance">
+                  <div class="party-info">
+                    <span class="party-name-label">United Torah Judaism</span>
+                    <span class="party-bloc-sub-label mono">// Netanyahu Coalition</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-vance" style="width: 32%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">8.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="7.0" data-bloc="vance">
+                  <div class="party-info">
+                    <span class="party-name-label">Otzma Yehudit</span>
+                    <span class="party-bloc-sub-label mono">// Netanyahu Coalition</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-vance" style="width: 28%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">7.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="5.0" data-bloc="neutral">
+                  <div class="party-info">
+                    <span class="party-name-label">Hadash-Ta'al</span>
+                    <span class="party-bloc-sub-label mono">// Arab / Non-Aligned</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-neutral" style="width: 20%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">5.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="5.0" data-bloc="neutral">
+                  <div class="party-info">
+                    <span class="party-name-label">Ra'am</span>
+                    <span class="party-bloc-sub-label mono">// Arab / Non-Aligned</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-neutral" style="width: 20%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">5.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="4.0" data-bloc="sterling">
+                  <div class="party-info">
+                    <span class="party-name-label">Religious Zionism</span>
+                    <span class="party-bloc-sub-label mono">// Rel. Nationalist</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-sterling" style="width: 16%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">4.0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">SBR</span>
+        <p class="footer-tagline">Terrorism · Geo-Politics · Warfare · Intelligence</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#articles">Intel Feed</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="poll-analysis.html">Poll &amp; Analysis</a>
+      </div>
+      <div class="footer-contact">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:southblocreports7@gmail.com" class="mono">southblocreports7@gmail.com</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="mono">© <span id="currentYear">2026</span>, SOUTH BLOC REPORTS. Developed by <strong>Niranjan Simha
+            DH</strong>.</p>
+        <p class="mono footer-disclaimer">All analysis is based on open-source intelligence. For informational purposes
+          only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="poll-analysis.js?v=2"></script>
+</body>
+
+</html>
