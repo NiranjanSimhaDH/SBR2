@@ -58,13 +58,13 @@ const POLL_DATA = {
   sbr_average: {
     vance_total: 51,
     rostova_total: 59,
-    segments: { vance: 41, sterling: 10, neutral: 10, rostova: 59 },
+    segments: { vance: 47, sterling: 4, neutral: 10, rostova: 59 },
     parties: [
       { name: "Likud", sub: "// Netanyahu Coalition", seats: 23.0, bloc: "vance" },
-      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 22.5, bloc: "rostova" },
-      { name: "Yashar", sub: "// Opposition Bloc", seats: 17.0, bloc: "rostova" },
+      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 21.0, bloc: "rostova" },
+      { name: "Yashar", sub: "// Opposition Bloc", seats: 19.0, bloc: "rostova" },
       { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
-      { name: "The Democrats", sub: "// Opposition Bloc", seats: 9.5, bloc: "rostova" },
+      { name: "The Democrats", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
       { name: "Shas", sub: "// Netanyahu Coalition", seats: 9.0, bloc: "vance" },
       { name: "United Torah Judaism", sub: "// Netanyahu Coalition", seats: 8.0, bloc: "vance" },
       { name: "Otzma Yehudit", sub: "// Netanyahu Coalition", seats: 7.0, bloc: "vance" },
@@ -76,14 +76,14 @@ const POLL_DATA = {
   channel12: {
     vance_total: 52,
     rostova_total: 58,
-    segments: { vance: 42, sterling: 10, neutral: 10, rostova: 58 },
+    segments: { vance: 48, sterling: 4, neutral: 10, rostova: 58 },
     parties: [
       { name: "Likud", sub: "// Netanyahu Coalition", seats: 24.0, bloc: "vance" },
-      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 23.0, bloc: "rostova" },
-      { name: "Yashar", sub: "// Opposition Bloc", seats: 16.0, bloc: "rostova" },
+      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 21.0, bloc: "rostova" },
+      { name: "Yashar", sub: "// Opposition Bloc", seats: 19.0, bloc: "rostova" },
       { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
       { name: "Shas", sub: "// Netanyahu Coalition", seats: 9.0, bloc: "vance" },
-      { name: "The Democrats", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
+      { name: "The Democrats", sub: "// Opposition Bloc", seats: 8.0, bloc: "rostova" },
       { name: "United Torah Judaism", sub: "// Netanyahu Coalition", seats: 8.0, bloc: "vance" },
       { name: "Otzma Yehudit", sub: "// Netanyahu Coalition", seats: 7.0, bloc: "vance" },
       { name: "Hadash-Ta'al", sub: "// Arab / Non-Aligned", seats: 5.0, bloc: "neutral" },
@@ -92,15 +92,15 @@ const POLL_DATA = {
     ]
   },
   kan_news: {
-    vance_total: 50,
-    rostova_total: 60,
-    segments: { vance: 40, sterling: 10, neutral: 10, rostova: 60 },
+    vance_total: 52,
+    rostova_total: 58,
+    segments: { vance: 47, sterling: 5, neutral: 10, rostova: 58 },
     parties: [
-      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 24.0, bloc: "rostova" },
-      { name: "Likud", sub: "// Netanyahu Coalition", seats: 22.0, bloc: "vance" },
-      { name: "Yashar", sub: "// Opposition Bloc", seats: 17.0, bloc: "rostova" },
-      { name: "The Democrats", sub: "// Opposition Bloc", seats: 11.0, bloc: "rostova" },
-      { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
+      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 21.0, bloc: "rostova" },
+      { name: "Likud", sub: "// Netanyahu Coalition", seats: 23.0, bloc: "vance" },
+      { name: "Yashar", sub: "// Opposition Bloc", seats: 18.0, bloc: "rostova" },
+      { name: "The Democrats", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
+      { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
       { name: "Shas", sub: "// Netanyahu Coalition", seats: 10.0, bloc: "vance" },
       { name: "United Torah Judaism", sub: "// Netanyahu Coalition", seats: 8.0, bloc: "vance" },
       { name: "Otzma Yehudit", sub: "// Netanyahu Coalition", seats: 6.0, bloc: "vance" },
@@ -112,9 +112,9 @@ const POLL_DATA = {
   i24_direct: {
     vance_total: 53,
     rostova_total: 57,
-    segments: { vance: 43, sterling: 10, neutral: 10, rostova: 57 },
+    segments: { vance: 49, sterling: 4, neutral: 10, rostova: 57 },
     parties: [
-      { name: "Likud", sub: "// Netanyahu Coalition", seats: 24.0, bloc: "vance" },
+      { name: "Likud", sub: "// Netanyahu Coalition", seats: 23.0, bloc: "vance" },
       { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 22.0, bloc: "rostova" },
       { name: "Yashar", sub: "// Opposition Bloc", seats: 18.0, bloc: "rostova" },
       { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
@@ -128,14 +128,14 @@ const POLL_DATA = {
     ]
   },
   times_israel: {
-    vance_total: 49,
-    rostova_total: 61,
-    segments: { vance: 39, sterling: 10, neutral: 10, rostova: 61 },
+    vance_total: 50,
+    rostova_total: 60,
+    segments: { vance: 46, sterling: 4, neutral: 10, rostova: 60 },
     parties: [
-      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 23.0, bloc: "rostova" },
-      { name: "Likud", sub: "// Netanyahu Coalition", seats: 22.0, bloc: "vance" },
-      { name: "Yashar", sub: "// Opposition Bloc", seats: 17.0, bloc: "rostova" },
-      { name: "The Democrats", sub: "// Opposition Bloc", seats: 11.0, bloc: "rostova" },
+      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 21.0, bloc: "rostova" },
+      { name: "Likud", sub: "// Netanyahu Coalition", seats: 23.0, bloc: "vance" },
+      { name: "Yashar", sub: "// Opposition Bloc", seats: 19.0, bloc: "rostova" },
+      { name: "The Democrats", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
       { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
       { name: "Shas", sub: "// Netanyahu Coalition", seats: 9.0, bloc: "vance" },
       { name: "United Torah Judaism", sub: "// Netanyahu Coalition", seats: 8.0, bloc: "vance" },
@@ -148,12 +148,12 @@ const POLL_DATA = {
   jpost_maariv: {
     vance_total: 52,
     rostova_total: 58,
-    segments: { vance: 42, sterling: 10, neutral: 10, rostova: 58 },
+    segments: { vance: 48, sterling: 4, neutral: 10, rostova: 58 },
     parties: [
       { name: "Likud", sub: "// Netanyahu Coalition", seats: 23.0, bloc: "vance" },
-      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 22.0, bloc: "rostova" },
-      { name: "Yashar", sub: "// Opposition Bloc", seats: 16.0, bloc: "rostova" },
-      { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 11.0, bloc: "rostova" },
+      { name: "Together (BeYachad)", sub: "// Opposition Bloc", seats: 20.0, bloc: "rostova" },
+      { name: "Yashar", sub: "// Opposition Bloc", seats: 19.0, bloc: "rostova" },
+      { name: "Yisrael Beiteinu", sub: "// Opposition Bloc", seats: 10.0, bloc: "rostova" },
       { name: "Shas", sub: "// Netanyahu Coalition", seats: 10.0, bloc: "vance" },
       { name: "The Democrats", sub: "// Opposition Bloc", seats: 9.0, bloc: "rostova" },
       { name: "United Torah Judaism", sub: "// Netanyahu Coalition", seats: 8.0, bloc: "vance" },
@@ -165,7 +165,7 @@ const POLL_DATA = {
   }
 };
 
-let activeSourceKey = 'sbr_average';
+let activeSourceKey = 'channel12';
 const seatRangeMax = 25.0;
 
 // Elements

@@ -77,12 +77,12 @@
             <div class="poll-dropdown-container">
               <div class="custom-select" id="pollDropdown">
                 <div class="custom-select-trigger" id="pollDropdownTrigger">
-                  <span>SBR Combined Index (Average)</span>
+                  <span>Channel 12 News Poll</span>
                   <span class="arrow-icon">▼</span>
                 </div>
                 <div class="custom-select-menu" id="pollDropdownMenu">
-                  <div class="custom-select-item active" data-value="sbr_average">SBR Combined Index (Average)</div>
-                  <div class="custom-select-item" data-value="channel12">Channel 12 News Poll</div>
+                  <div class="custom-select-item" data-value="sbr_average">SBR Combined Index (Average)</div>
+                  <div class="custom-select-item active" data-value="channel12">Channel 12 News Poll</div>
                   <div class="custom-select-item" data-value="kan_news">Kan News Public Broadcast</div>
                   <div class="custom-select-item" data-value="i24_direct">i24 News / Direct Polls</div>
                   <div class="custom-select-item" data-value="times_israel">Times of Israel Tracker</div>
@@ -103,14 +103,14 @@
                   </div>
                   <div class="leader-text">
                     <div class="leader-name">Netanyahu Coalition</div>
-                    <div class="leader-seats seats-vance" id="vanceSeatsText">51</div>
+                    <div class="leader-seats seats-vance" id="vanceSeatsText">52</div>
                   </div>
                 </div>
 
                 <div class="leader-item rostova-item">
                   <div class="leader-text text-right">
                     <div class="leader-name">Opposition Bloc</div>
-                    <div class="leader-seats seats-rostova" id="rostovaSeatsText">59</div>
+                    <div class="leader-seats seats-rostova" id="rostovaSeatsText">58</div>
                   </div>
                   <div class="leader-avatar-container">
                     <img src="party/Together_party.png" alt="Opposition Bloc" class="leader-avatar" />
@@ -122,10 +122,10 @@
               <!-- Segmented Coalition Progress Bar -->
               <div class="coalition-bar-wrapper">
                 <div class="coalition-bar-track">
-                  <div class="coalition-bar-segment seg-vance" id="segVance" style="width: 34.2%;"></div>
-                  <div class="coalition-bar-segment seg-sterling" id="segSterling" style="width: 8.3%;"></div>
-                  <div class="coalition-bar-segment seg-neutral" id="segNeutral" style="width: 8.3%;"></div>
-                  <div class="coalition-bar-segment seg-rostova" id="segRostova" style="width: 49.2%;"></div>
+                  <div class="coalition-bar-segment seg-vance" id="segVance" style="width: 40%;"></div>
+                  <div class="coalition-bar-segment seg-sterling" id="segSterling" style="width: 3.33%;"></div>
+                  <div class="coalition-bar-segment seg-neutral" id="segNeutral" style="width: 8.33%;"></div>
+                  <div class="coalition-bar-segment seg-rostova" id="segRostova" style="width: 48.33%;"></div>
                 </div>
                 <div class="majority-threshold-line" style="left: 50.83%;"> <!-- 61/120 = 50.83% -->
                   <div class="majority-text mono">61 SEATS MAJORITY</div>
@@ -157,38 +157,38 @@
             <div class="party-breakdown-section">
               <div class="party-breakdown-header mono">// DETAILED PARTY SEATS — KNESSET (120 TOTAL)</div>
               <div class="party-list" id="partyList">
-                <!-- Hardcoded default view for SBR Combined Index -->
-                <div class="party-row-item" data-seats="23.0" data-bloc="vance">
+                <!-- Hardcoded default view for Channel 12 -->
+                <div class="party-row-item" data-seats="24.0" data-bloc="vance">
                   <div class="party-info">
                     <span class="party-name-label">Likud</span>
                     <span class="party-bloc-sub-label mono">// Netanyahu Coalition</span>
                   </div>
                   <div class="party-bar-container">
-                    <div class="party-bar-fill fill-vance" style="width: 92%;"></div>
+                    <div class="party-bar-fill fill-vance" style="width: 96%;"></div>
                   </div>
-                  <div class="party-seats-val mono">23.0</div>
+                  <div class="party-seats-val mono">24.0</div>
                 </div>
 
-                <div class="party-row-item" data-seats="22.5" data-bloc="rostova">
+                <div class="party-row-item" data-seats="21.0" data-bloc="rostova">
                   <div class="party-info">
                     <span class="party-name-label">Together (BeYachad)</span>
                     <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
                   </div>
                   <div class="party-bar-container">
-                    <div class="party-bar-fill fill-rostova" style="width: 90%;"></div>
+                    <div class="party-bar-fill fill-rostova" style="width: 84%;"></div>
                   </div>
-                  <div class="party-seats-val mono">22.5</div>
+                  <div class="party-seats-val mono">21.0</div>
                 </div>
 
-                <div class="party-row-item" data-seats="17.0" data-bloc="rostova">
+                <div class="party-row-item" data-seats="19.0" data-bloc="rostova">
                   <div class="party-info">
                     <span class="party-name-label">Yashar</span>
                     <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
                   </div>
                   <div class="party-bar-container">
-                    <div class="party-bar-fill fill-rostova" style="width: 68%;"></div>
+                    <div class="party-bar-fill fill-rostova" style="width: 76%;"></div>
                   </div>
-                  <div class="party-seats-val mono">17.0</div>
+                  <div class="party-seats-val mono">19.0</div>
                 </div>
 
                 <div class="party-row-item" data-seats="10.0" data-bloc="rostova">
@@ -202,17 +202,6 @@
                   <div class="party-seats-val mono">10.0</div>
                 </div>
 
-                <div class="party-row-item" data-seats="9.5" data-bloc="rostova">
-                  <div class="party-info">
-                    <span class="party-name-label">The Democrats</span>
-                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
-                  </div>
-                  <div class="party-bar-container">
-                    <div class="party-bar-fill fill-rostova" style="width: 38%;"></div>
-                  </div>
-                  <div class="party-seats-val mono">9.5</div>
-                </div>
-
                 <div class="party-row-item" data-seats="9.0" data-bloc="vance">
                   <div class="party-info">
                     <span class="party-name-label">Shas</span>
@@ -222,6 +211,17 @@
                     <div class="party-bar-fill fill-vance" style="width: 36%;"></div>
                   </div>
                   <div class="party-seats-val mono">9.0</div>
+                </div>
+
+                <div class="party-row-item" data-seats="8.0" data-bloc="rostova">
+                  <div class="party-info">
+                    <span class="party-name-label">The Democrats</span>
+                    <span class="party-bloc-sub-label mono">// Opposition Bloc</span>
+                  </div>
+                  <div class="party-bar-container">
+                    <div class="party-bar-fill fill-rostova" style="width: 32%;"></div>
+                  </div>
+                  <div class="party-seats-val mono">8.0</div>
                 </div>
 
                 <div class="party-row-item" data-seats="8.0" data-bloc="vance">
